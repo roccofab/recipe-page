@@ -1,0 +1,137 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+:root {
+  /* ## Colors */
+  --nutmeg: hsl(14, 45%, 36%);
+  --dark-raspberry: #7b284f;
+  --light-raspberry: #823352;
+  --white: hsl(0, 0%, 100%);
+  --rose-white: hsl(330, 100%, 98%);
+  --eggshell: hsl(30, 54%, 90%);
+  --light-grey: hsl(30, 18%, 87%);
+  --wenge-brown: hsl(30, 10%, 34%);
+  --dark-charcoal: hsl(24, 5%, 18%);
+  --color-primary: #2584ff;
+}
+@font-face {
+  font-family: "Young Serif";
+  src: url(./assets/fonts/young-serif/YoungSerif-Regular.ttf);
+}
+@font-face {
+  font-family: "Outfit";
+  src: url(./assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Outfit";
+  background-color: var(--eggshell);
+}
+img {
+    max-width: 40vw;
+    border-radius: 10px;
+}
+.container {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    width: 44vw;
+    height: auto;
+    background-color:  hsl(0, 0%, 100%);
+    padding: 3rem;
+    margin-top: 6rem;
+    border-radius: 15px;
+}
+.prepBox {
+  background-color: hsl(330, 100%, 98%);
+  border-radius: 10px;
+  padding: 2rem;
+}
+.prepBox ul{
+  margin-left: -20px;
+  line-height: 2;
+}
+.prepBox
+h3 {
+    color: #7b284f;
+}
+h2 {
+  color: #823352;
+  font-family: "Young Serif";
+  font-size: 15px;
+}
+h1{
+  font-family: "Young Serif";
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+p,
+li,
+td {
+  font-size: 1.6rem;
+  color: var(--wenge-brown);
+}
+li {
+  padding-left: 10px;
+  letter-spacing: 0.3px;
+  line-height: 25px;
+}
+hr {
+  margin: 20px 0;
+  opacity: 50%;
+}
+.ingredientsBox li {
+  list-style-type: square;
+  color: hsl(30, 10%, 34%);
+}
+
+ol li::marker {
+  color: var(--nutmeg);
+  font-weight: 600;
+}
+.tableContainer{
+  width: 100%;
+}
+td {
+  width: 65px;
+  padding: 15px 30px;
+  font-weight: 400;
+}
+tbody {
+  display: flex;
+  flex-direction: column;
+}
+.row {
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+}
+tr {
+display: grid;
+grid-template-columns: 1fr 1fr;
+}
+tr :nth-child(2) {
+  color: var(--nutmeg);
+  font-weight: 700;
+  padding-left: 20px;
+}
+@media (max-width: 750px) {
+  .container{
+    width: 100%;
+    height: auto;
+  }
+  img {
+   max-width: 100%;
+   border-radius: 0;
+  }
+}
